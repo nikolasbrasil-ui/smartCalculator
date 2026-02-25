@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <meta name="description" content="Calculadora moderna com design dark blue." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app">
+    <section class="calc" aria-label="Calculadora">
+      <header class="calc__header">
+        <div>
+          <h1 class="calc__title">Calculadora</h1>
+          <p class="calc__subtitle">Simples, rápida e bonita</p>
+        </div>
+        <div class="calc__badge" aria-hidden="true">v1</div>
+      </header>
+
+      <div class="display" role="group" aria-label="Visor">
+        <div class="display__history" id="history" aria-live="polite"></div>
+        <div class="display__value" id="display" aria-live="polite">0</div>
+      </div>
+
+      <div class="keys" role="group" aria-label="Teclado da calculadora">
+        <button class="key key--muted" data-action="clear" aria-label="Limpar tudo">AC</button>
+        <button class="key key--muted" data-action="backspace" aria-label="Apagar último">⌫</button>
+        <button class="key key--muted" data-action="percent" aria-label="Porcentagem">%</button>
+        <button class="key key--op" data-value="/" aria-label="Dividir">÷</button>
+
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+        <button class="key key--op" data-value="*" aria-label="Multiplicar">×</button>
+
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+        <button class="key key--op" data-value="-" aria-label="Subtrair">−</button>
+
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+        <button class="key key--op" data-value="+" aria-label="Somar">+</button>
+
+        <button class="key key--wide" data-action="toggleSign" aria-label="Trocar sinal">±</button>
+        <button class="key" data-value="0">0</button>
+        <button class="key" data-action="decimal" aria-label="Vírgula decimal">,</button>
+        <button class="key key--equals" data-action="equals" aria-label="Igual">=</button>
+      </div>
+
+      <footer class="calc__footer">
+        <span>Dicas:</span>
+        <span>Enter = igual • Esc = AC • Backspace = apagar</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
